@@ -1,0 +1,13 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Libre Baskerville", serif;
+  letter-spacing: 0.08rem;
+}
+
+@font-face {
+  font-family: "Libre Baskerville";
+  src: url(../fonts/LibreBaskerville-Regular.otf);
+}
