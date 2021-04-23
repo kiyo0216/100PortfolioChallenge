@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components/macro'
 
 import { Item } from '../components'
+import { ItemDatas } from "../../database"
 
 const Container = styled.div`
   position: absolute;
@@ -12,13 +13,9 @@ const Container = styled.div`
 `
 
 export default function Carousel() {
-  const test = {
-    title: "Fukakouryoku",
-    src: "/portfolio1/images/Fukakouryoku 5.png"
-  }
   return (
     <Container>
-      <Item item={test}/>
+      <Item item={ItemDatas[0]}/>
     </Container>
   )
 }

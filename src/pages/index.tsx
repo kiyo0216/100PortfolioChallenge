@@ -2,7 +2,7 @@ import * as React from "react"
 import { Link } from 'gatsby'
 
 import 'normalize.css'
-import '../css/global.css'
+import '../../static/portfolio1/css/global.css'
 
 export default function IndexPage() {
   return (

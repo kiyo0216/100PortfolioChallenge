@@ -17,7 +17,7 @@ export default function Item({ item }) {
   return (
     <Container>
       <Title>{item.title}</Title>
-      <Image src={item.src} />
+      <Image src={item.image} />
     </Container>
   )
 }
