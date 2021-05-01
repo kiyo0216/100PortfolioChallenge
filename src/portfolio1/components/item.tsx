@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const Container = styled.div`
   position: absolute;
-  transition: all 1s linear;
+  transition: all 1s ease-out;
 
   &.five {
     opacity: 0;
@@ -39,7 +39,7 @@ const Container = styled.div`
 `
 
 const Image = styled.img`
-  transition: all 1s linear;
+  transition: all 1s ease-out;
 
   .five & {
     width: 220px;
@@ -73,7 +73,7 @@ const Image = styled.img`
 `
 
 const Title = styled.h2`
-  transition: all 1s linear;
+  transition: all 1s ease-out;
 
   width: 350px;
   position: absolute;
@@ -92,7 +92,7 @@ const Title = styled.h2`
 `
 
 const TitleShadow = styled.h2`
-  transition: all 1s linear;
+  transition: all 1s ease-out;
 
   width: 350px;
   position: absolute;
