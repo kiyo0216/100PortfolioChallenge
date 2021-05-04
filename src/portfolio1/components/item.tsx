@@ -7,67 +7,65 @@ const Container = styled.div`
 
   &.five {
     opacity: 0;
-    top: -420px;
-    right: -5px;
+    top: -74vh;
+    right: -0.9vh;
   }
 
   &.four {
-    top: -285px;
-    right: 5px;
+    top: -50vh;
+    right: 0.9vh;
   }
 
   &.three {
-    top: -150px;
-    right: 15px;
+    top: -26.5vh;
+    right: 2.7vh;
+    opacity: ${props => props.hover === "up" ? 0.5 : 1};
   }
 
   &.two {
-    top: 0px;
-    right: 30px;
+    top: 0vh;
+    right: 5.3vh;
   }
 
   &.one {
-    top: 200px;
-    right: 50px;
+    top: 35vh;
+    right: 9vh;
+    opacity: ${props => props.hover === "down" ? 0.5 : 1};
   }
 
   &.zero {
     opacity: 0;
-    top: 330px;
-    right: 60px;
+    top: 59vh;
+    right: 10.5vh;
   }
 `
 
 const Image = styled.img`
   transition: all 1s ease-out;
+  width: 38vh;
 
   .five & {
-    width: 220px;
     transform: skew(0deg, -10deg);
   }
 
   .four & {
-    width: 220px;
     transform: skew(-10deg, -10deg);
   }
 
   .three & {
-    width: 220px;
     transform: skew(0deg, -10deg);
   }
 
   .two & {
-    width: 350px;
+    width: 61.5vh;
     transform: skew(-10deg, -10deg);
   }
 
   .one & {
-    width: 220px;
     transform: skew(0deg, -10deg);
   }
 
   .zero & {
-    width: 220px;
     transform: skew(-10deg, -10deg);
   }
 `
@@ -75,12 +73,12 @@ const Image = styled.img`
 const Title = styled.h2`
   transition: all 1s ease-out;
 
-  width: 350px;
+  width: 61.5vh;
   position: absolute;
-  top: -40px;
-  left: -40px;
+  top: -7vh;
+  left: -7vh;
   text-transform: uppercase;
-  font-size: 2.5rem;
+  font-size: 4.5vh;
   font-weight: 400;
   color: #CFC64F;
   transform: skew(-10deg, -10deg);
@@ -94,12 +92,12 @@ const Title = styled.h2`
 const TitleShadow = styled.h2`
   transition: all 1s ease-out;
 
-  width: 350px;
+  width: 61.5vh;
   position: absolute;
-  top: 20px;
-  left: 20px;
+  top: 3.5vh;
+  left: 3.5vh;
   text-transform: uppercase;
-  font-size: 2.5rem;
+  font-size: 4.5vh;
   font-weight: 400;
   filter: blur(5px);
   transform: skew(-10deg, -10deg);
@@ -110,9 +108,9 @@ const TitleShadow = styled.h2`
   }
 `
 
-export default function Item({ className, item }) {
+export default function Item({ hover, className, item }) {
   return (
-    <Container className={className}>
+    <Container hover={hover} className={className}>
       <Title>{item.title}</Title>
       <TitleShadow>{item.title}</TitleShadow>
       <Image src={item.image} />

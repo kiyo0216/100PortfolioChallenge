@@ -3,31 +3,27 @@ import styled from 'styled-components/macro'
 
 const Container = styled.div`
   position: absolute;
-  width: 220px;
-  height: 125px;
+  width: 38vh;
+  height: 21.5vh;
   z-index: 999;
   background-color: #000;
   opacity: 0;
 
   &.up {
-    top: -150px;
-    right: 15px;
+    top: -26.5vh;
+    right: 2.7vh;
     transform: skew(0deg, -10deg);
   }
 
   &.down {
-    top: 200px;
-    right: 50px;
+    top: 35vh;
+    right: 9vh;
     transform: skew(0deg, -10deg);
-  }
-
-  &:hover {
-    opacity: 0.2;
   }
 `
 
-export default function Button({ direction, action, ...restProps }){
+export default function Button({ direction, clickAction, setHover, ...restProps }){
   return (
-    <Container className={direction} onClick={action} {...restProps} />
+    <Container className={direction} onClick={clickAction} onMouseEnter={() => setHover(direction)} onMouseLeave={() => setHover("")} {...restProps} />
   )
 }
