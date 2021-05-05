@@ -9,16 +9,32 @@ const Container = styled.div`
   background-color: #000;
   opacity: 0;
 
-  &.up {
-    top: -26.5vh;
-    right: 2.7vh;
-    transform: skew(0deg, -10deg);
+  @media (orientation: landscape) {
+    &.up {
+      top: -26.5vh;
+      right: 2.7vh;
+      transform: skew(0deg, -10deg);
+    }
+
+    &.down {
+      top: 35vh;
+      right: 9vh;
+      transform: skew(0deg, -10deg);
+    }
   }
 
-  &.down {
-    top: 35vh;
-    right: 9vh;
-    transform: skew(0deg, -10deg);
+  @media (orientation: portrait) {
+    &.up {
+      top: 18.5vw;
+      right: 63.5vw;
+      transform: skew(0deg, -10deg);
+    }
+
+    &.down {
+      top: -5.5vw;
+      right: -40vw;
+      transform: skew(0deg, -10deg);
+    }
   }
 `
 

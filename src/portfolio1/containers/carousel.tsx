@@ -9,21 +9,22 @@ const Container = styled.div`
   position: absolute;
   height: 40vh;
   width: 40vw;
-  right: 12rem;
+  right: 10vw;
   top: 40vh;
 
   * {
     user-select: none;
     user-drag: none;
   }
-	
-	&:hover .three:hover {
-		opacity: 0.5
-	}
 
-	&:hover .one:hover {
-		opacity: 0.5
-	}
+  @media (orientation: landscape) {
+  }
+
+  @media (orientation: portrait) {
+    top: 40rem;
+    right: 20vw;
+  }
+
 `
 
 export default function Carousel() {
